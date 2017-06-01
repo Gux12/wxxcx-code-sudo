@@ -1,0 +1,52 @@
+/**index.wxss**/
+.bg {
+  width: 100%;
+  height: 700rpx;
+  position: absolute;
+}
+
+.title {
+  margin-top: 200rpx;
+  font-size: 24px;
+  color: #eee;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #eee;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.userinfo-avatar {
+  width: 128px;
+  height: 128px;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #eee;
+}
+
+.photo-area {
+  display: flex;
+  width:720rpx;
+  margin: 50rpx 0 0 0;
+  align-content: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cat-photo {
+  width: auto;
+  height: auto;
+}
+.cat-text {
+  width: 370rpx;
+}

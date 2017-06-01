@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#63C2D6",
+    "navigationBarTitleText": "扣猫和酥猫",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true 
+  },
+  "tabBar": {
+    "color": "#ddd",
+    "backgroundColor": "#fff",
+    "selectedColor": "#63C2D6",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "图鉴",
+        "iconPath": "assets/index/photo.png",
+        "selectedIconPath": "assets/index/photoSelected.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "assets/index/log.png",
+        "selectedIconPath": "assets/index/logSelected.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
