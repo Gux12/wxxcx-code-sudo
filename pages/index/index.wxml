@@ -9,7 +9,7 @@
   </view>
   <view class="photo-area">
     <view class="photo-contain" wx:for="{{photos}}" wx:for-item="photo" wx:for-index="idx">
-      <image id="{{photo._id}}" style="width:{{photo.dimensions.width/photo.dimensions.height*50}}px;height:50px;" src="{{photo.thumb_src}}" bindtap="cusImageTap"></image>
+      <image id="{{photo._id}}" style="width:{{photo.dimensions.width/photo.dimensions.height*100}}px;height:100px;" src="{{photo.urls.thumbnailUrl}}" bindtap="cusImageTap"></image>
       <!--<text>{{idx}}{{photo.url}}</text>-->
     </view>
   </view>

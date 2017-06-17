@@ -7,7 +7,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     photos: [],
-    photo_urls: []
+    photo_urls: [],
+    urlarray: []
   },
   //事件处理函数
   bindViewTap: function() {
@@ -27,14 +28,17 @@ Page({
       success: function (res) {
         console.log(res.data);
         var urls = [];
-        // for (var i in res.data){
-        //   res.data[i].src = 'https://gavingu.cn:444' + res.data[i].src;
-        //   res.data[i].thumb_src = 'https://gavingu.cn:444' + res.data[i].thumb_src;
-        //   urls.push(res.data[i].src);
-        // }
+        var urlarray = [];
+        for (var i in res.data){
+          // res.data[i].urls.thumbnailUrl = 'https://gavingu.cn:444' + res.data[i].urls.thumbnailUrl ;
+          // res.data[i].thumb_src = 'https://gavingu.cn:444' + res.data[i].thumb_src;
+          urls.push(res.data[i].urls);
+          urlarray.push(res.data[i].urls.url)
+        }
         that.setData({
           photos : res.data,
-          photo_urls : urls
+          photo_urls : urls,
+          urlarray: urlarray
         })
       }
     })
@@ -51,8 +55,8 @@ Page({
       if (this.data.photos[photo]._id == e.currentTarget.id) {
         console.log(this.data.photos[photo]._id);
         wx.previewImage({
-          current: this.data.photos[photo].src, // 当前显示图片的http链接
-          urls: this.data.photo_urls // 需要预览的图片http链接列表
+          current: this.data.photos[photo].urls.url, // 当前显示图片的http链接
+          urls: this.data.urlarray // 需要预览的图片http链接列表
         })
       }
     }
